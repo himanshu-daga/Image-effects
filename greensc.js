@@ -20,11 +20,11 @@ function loadBackgroundImage() {
 function createComposite() {
   // this function creates a new image with the dimensions of the foreground image and returns the composite green screen image
   var output = new SimpleImage(fgImage.getWidth(),fgImage.getHeight());
-  var greenThreshold = 240;
+  //var greenThreshold = 200;
   for (var pixel of fgImage.values()) {
     var x = pixel.getX();
     var y = pixel.getY();
-    if (pixel.getGreen() > greenThreshold) {
+    if ( pixel.getGreen()> pixel.getBlue() + pixel.getRed() ) {
       //pixel is green, use background
       var bgPixel = bgImage.getPixel(x,y);
       output.setPixel(x,y,bgPixel);
