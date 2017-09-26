@@ -1,0 +1,19 @@
+h1 {
+  font-family: arial;
+  color: dimgray;
+}
+
+body {
+  font-family: arial;
+  margin: 30px;
+  background-color: #ADD8E6;
+}
+
+canvas {
+  height: 200px;
+  border: 2px solid dimgray;
+}
+
+input {
+  font-size: 14pt;
+}
