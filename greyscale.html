@@ -19,15 +19,15 @@
 		</canvas>
 
 		<p>
-		Origional image: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()" >
+		Image: <input type="file" multiple="false" accept="image/*" id="orgfile" onchange="loadOrigionalImage()" >
 		</p>
 
-		<p>
+<!--		<p> 
 		Greyscale image: <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()" >
 		</p>
-
+-->
 		<p>
-		<input type="button" value="Create Greyscale Image" onclick="doGreyScreen()" >
+		<input type="button" value="Create Greyscale Image" onclick="makeGrey()" >
 		<input type="button" value="Clear Canvases" onclick="clearCanvas()" >
 		</p>
 		<br><br>
