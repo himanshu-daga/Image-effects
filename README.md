@@ -1,5 +1,7 @@
 # Image-effects
 
+To run the site visit: http://himanshu-daga.github.io/Image-effects
+
 Web appication allowing to upload an image and add effects to it.
 
 Currently it has 2 effects:
