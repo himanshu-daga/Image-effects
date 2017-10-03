@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	
+	<heaad>
+		<title> Stegnograph </title>
+		<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js" >
+		</script>
+		<script src="stegnograph.js">
+		</script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	
+	<body>
+		<h1>Hide one image into another</h1>
+
+		<canvas id = "fgcan">
+		</canvas>
+		<canvas id = "bgcan">
+		</canvas>
+
+		<p>
+		Select image in which you want to hide your image: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()" >
+		</p>
+
+		<p>
+		Select image to be hidden: <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()" >
+		</p>
+
+		<p>
+		<input type="button" value="Hide image" onclick="encryptImage()" >
+		<input type="button" value="Clear Canvases" onclick="clearCanvas()" >
+		</p>
+		<br>
+		<br>
+		<a href="index.html"><input type="button" value="Home page"></a>	
+		
+	</body>
+</html>
+
