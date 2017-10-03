@@ -17,6 +17,18 @@ function loadBackgroundImage() {
   bgImage.drawTo(bgCanvas);
 }
 
+function clearCanvas() {
+  doClear(fgCanvas);
+  doClear(bgCanvas);
+}
+
+function doClear(canvas) {
+  var context = canvas.getContext("2d");
+  context.clearRect(0,0,canvas.width,canvas.height);
+}
+
+//encryption functions--------------------------------------------------------------------------------------
+
 function encrypt(){
   var output = new SimpleImage(fgImage.getWidth(),fgImage.getHeight());
   alert("5");
@@ -53,19 +65,37 @@ function encryptImage(){
   	alert("Size of image to be hidden is smaller than size of hiding image. Choose another image bigger in dimensions");
   }
   clearCanvas();
-  alert("1");
   var finalImage = encrypt();
-  alert("2");
   finalImage.drawTo(fgCanvas);
-  alert("3");
 }
 
-function clearCanvas() {
-  doClear(fgCanvas);
+//---------------------------------------------------------------------------------------------------
+
+//decryption functions-------------------------------------------------------------------------------
+
+function decrypt(){
+  var output = new SimpleImage(fgImage.getWidth(),fgImage.getHeight());
+  for (var pixel of fgImage.values()) {
+    var x = pixel.getX();
+    var y = pixel.getY();   
+	var r= (pixel.getRed()%16)*16;
+	var g= (pixel.getGreen()%16)*16;
+	var b= (pixel.getBlue()%16)*16;
+	pixel.setRed(r);
+	pixel.setGreen(g);
+	pixel.setBlue(b);
+	output.setPixel(x,y,pixel);
+  }
+  return output;
+}
+
+function decryptImage(){
+  if (fgImage == null  || ! fgImage.complete()) {
+    alert("image not loaded");
+  }
+  bgCanvas = document.getElementById("bgcan");
   doClear(bgCanvas);
+  var finalImage = decrypt();
+  finalImage.drawTo(bgCanvas);
 }
 
-function doClear(canvas) {
-  var context = canvas.getContext("2d");
-  context.clearRect(0,0,canvas.width,canvas.height);
-}
