@@ -17,41 +17,49 @@ function loadBackgroundImage() {
   bgImage.drawTo(bgCanvas);
 }
 
-/*function createComposite() {
-  // this function creates a new image with the dimensions of the foreground image and returns the composite green screen image
+function encrypt(){
   var output = new SimpleImage(fgImage.getWidth(),fgImage.getHeight());
-  //var greenThreshold = 200;
+  alert("5");
   for (var pixel of fgImage.values()) {
     var x = pixel.getX();
-    var y = pixel.getY();
-    if ( pixel.getGreen()> pixel.getBlue() + pixel.getRed() ) {
-      //pixel is green, use background
+    var y = pixel.getY();   
+    if (x<=bgImage.getWidth() && y<=bgImage.getHeight()){
       var bgPixel = bgImage.getPixel(x,y);
+      var r= (pixel.getRed()/16)*16 + bgPixel.getRed()%16;
+      var g= ((pixel.getGreen()/16)*16 + bgPixel.getGreen()%16);
+      var b= (pixel.getBlue()/16)*16 + bgPixel.getBlue()%16;
+      if(r>255 || g>255 || b>255);
+      bgPixel.setRed(r);
+      bgPixel.setGreen(g);
+      bgPixel.setBlue(b);
       output.setPixel(x,y,bgPixel);
     }
     else {
-      //pixel is not green, use foreground
       output.setPixel(x,y,pixel);
     }
   }
   return output;
 }
 
-function doGreenScreen() {
-  //check that images are loaded
+function encryptImage(){
   if (fgImage == null  || ! fgImage.complete()) {
     alert("Foreground image not loaded");
   }
   if (bgImage == null || ! bgImage.complete()) {
     alert("Background image not loaded");
   }
-  // clear canvases
+    if(fgImage.getWidth()<bgImage.getWidth() || fgImage.getHeight()< bgImage.getHeight())
+  {
+  	alert("Size of image to be hidden is smaller than size of hiding image. Choose another image bigger in dimensions");
+  }
   clearCanvas();
-  // call createComposite, which does green screen algorithm and returns a composite image
-  var finalImage = createComposite();
+  alert("1");
+  var finalImage = encrypt();
+  alert("2");
   finalImage.drawTo(fgCanvas);
+  alert("3");
 }
-*/
+
 function clearCanvas() {
   doClear(fgCanvas);
   doClear(bgCanvas);
