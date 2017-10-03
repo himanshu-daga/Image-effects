@@ -31,16 +31,14 @@ function doClear(canvas) {
 
 function encrypt(){
   var output = new SimpleImage(fgImage.getWidth(),fgImage.getHeight());
-  alert("5");
   for (var pixel of fgImage.values()) {
     var x = pixel.getX();
     var y = pixel.getY();   
     if (x<=bgImage.getWidth() && y<=bgImage.getHeight()){
       var bgPixel = bgImage.getPixel(x,y);
-      var r= (pixel.getRed()/16)*16 + bgPixel.getRed()%16;
-      var g= ((pixel.getGreen()/16)*16 + bgPixel.getGreen()%16);
-      var b= (pixel.getBlue()/16)*16 + bgPixel.getBlue()%16;
-      if(r>255 || g>255 || b>255);
+      var r= Math.floor(pixel.getRed()/16)*16 + bgPixel.getRed()/16;
+      var g= Math.floor(pixel.getGreen()/16)*16 + bgPixel.getGreen()/16;
+      var b= Math.floor(pixel.getBlue()/16)*16 + bgPixel.getBlue()/16;
       bgPixel.setRed(r);
       bgPixel.setGreen(g);
       bgPixel.setBlue(b);
