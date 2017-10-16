@@ -1,6 +1,6 @@
  body {
 
- 	background-color: white;
+ 	background-color: #011e30;
 	font-family: Verdana;
 	margin: 0px;
 }
@@ -16,14 +16,14 @@ input {
 
 header {
 	background-image: url(img/1.jpg);
-	color: white;
+	color: #f0f0f0;
 	padding: 15px;
 	text-align: center;
 }
 
 h2 {
-	text-shadow: 3px 2px cyan;
-	color: #a1a1a1;
+
+	color: #f0f0f0;
 	text-align: center;
 }
 
@@ -40,7 +40,8 @@ footer {
 .list {
 	
 	text-align: center;
-	margin: 40px;
+	margin: 30px;
+	padding: 10px;
 }
 
 a {
@@ -59,5 +60,5 @@ input {
 }
 
 p{
-	color: #006c9f;
+	color: #4d7284;
 }
