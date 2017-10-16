@@ -1,7 +1,8 @@
-body {
-  background-color: wheat;
-  font-family: Verdana;
-  margin: 40px;
+ body {
+
+ 	background-color: white;
+	font-family: Verdana;
+	margin: 0px;
 }
 
 canvas {
@@ -11,4 +12,31 @@ canvas {
 
 input {
   font-size: 12pt;
+}
+
+.top {
+	background-image: url(img/1.jpg);
+	color: white;
+	padding: 15px;
+	text-align: center;
+}
+
+h2 {
+	text-shadow: 3px 2px cyan;
+	color: #a1a1a1;
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+	color: #b5b5b5;
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	margin: 500px;
 }
