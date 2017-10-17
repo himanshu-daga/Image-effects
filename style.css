@@ -53,6 +53,11 @@ input {
 	border-width: 2px;
 	font-size: 14pt;
 	width: 55%;
+	margin: 3px;
+}
+
+.alongside {
+	width: 32%;
 }
 
 p{
