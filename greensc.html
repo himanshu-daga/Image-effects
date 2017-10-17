@@ -14,26 +14,28 @@
 		<header>
 			<h1>Green Screen Web Page</h1>
 		</header>
+		<div class="center">
+			<canvas id = "fgcan">
+			</canvas>
+			<canvas id = "bgcan">
+			</canvas>
 
-		<canvas id = "fgcan">
-		</canvas>
-		<canvas id = "bgcan">
-		</canvas>
+			<p>
+			Foreground: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()" >
+			</p>
 
-		<p>
-		Foreground: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()" >
-		</p>
+			<p>
+			Background: <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()" >
+			</p>
 
-		<p>
-		Background: <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()" >
-		</p>
+			<p>
+			<input class="alongside" type="button" value="Create Composite" onclick="doGreenScreen()" >
+			<input class="alongside" type="button" value="Clear Canvases" onclick="clearCanvas()" >
+			</p><br>
 
-		<p>
-		<input class="alongside" type="button" value="Create Composite" onclick="doGreenScreen()" >
-		<input class="alongside" type="button" value="Clear Canvases" onclick="clearCanvas()" >
-		</p><br>
+			<a href="index.html"><input style="width: 64.7%"  type="button" value="Home page"></a>	
+		</div>
 
-		<a href="index.html"><input style="width: 64.7%"  type="button" value="Home page"></a>	
 		
 	</body>
 </html>

@@ -14,27 +14,29 @@
 		<header>
 			<h1>Hide one image into another</h1>
 		</header>
+		<div class="center">
+			<canvas id = "fgcan">
+			</canvas>
+			<canvas id = "bgcan">
+			</canvas>
 
-		<canvas id = "fgcan">
-		</canvas>
-		<canvas id = "bgcan">
-		</canvas>
+			<p>
+			Select image to be shown: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()" >
+			</p>
 
-		<p>
-		Select image in which you want to hide your image: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()" >
-		</p>
+			<p>
+			Select image to be hidden: <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()" >
+			</p>
 
-		<p>
-		Select image to be hidden: <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()" >
-		</p>
-
-		<p>
-		<input class="alongside" type="button" value="Hide image" onclick="encryptImage()" >
-		<input class="alongside" type="button" value="Clear Canvases" onclick="clearCanvas()" >
-		</p>
-		<br>
-		<a href="decrypt.html"><input class="alongside" type="button" value="Decrypt image"></a>
-		<a href="index.html"><input class="alongside" type="button" value="Home page"></a>	
+			<p>
+			<input class="alongside" type="button" value="Hide image" onclick="encryptImage()" >
+			<input class="alongside" type="button" value="Clear Canvases" onclick="clearCanvas()" >
+			</p>
+			<br>
+			<a href="decrypt.html"><input class="alongside" type="button" value="Decrypt image"></a>
+			<a href="index.html"><input class="alongside" type="button" value="Home page"></a>				
+		</div>
+			
 		
 	</body>
 </html>

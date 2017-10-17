@@ -14,23 +14,25 @@
 		<header>
 			<h1>Extract hidden image</h1>
 		</header>
+		<div class="center">
+			<canvas id = "fgcan">
+			</canvas>
+			<canvas id = "bgcan">
+			</canvas>
 
-		<canvas id = "fgcan">
-		</canvas>
-		<canvas id = "bgcan">
-		</canvas>
+			<p>
+			Choose file to extract: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()" >
+			</p>
 
-		<p>
-		Choose file to extract hidden file: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()" >
-		</p>
-
-		<p>
-		<input class="alongside" type="button" value="Extract hidden file" onclick="decryptImage()" >
-		<input class="alongside" type="button" value="Clear Canvases" onclick="clearCanvas()" >
-		</p>
-		<br>
-		<a href="encrypt.html"><input class="alongside" type="button" value="Encrypt image"></a>
-		<a href="index.html"><input class="alongside" type="button" value="Home page"></a>	
+			<p>
+			<input class="alongside" type="button" value="Extract hidden file" onclick="decryptImage()" >
+			<input class="alongside" type="button" value="Clear Canvases" onclick="clearCanvas()" >
+			</p>
+			<br>
+			<a href="encrypt.html"><input class="alongside" type="button" value="Encrypt image"></a>
+			<a href="index.html"><input class="alongside" type="button" value="Home page"></a>	
+		</div>
+		
 		
 	</body>
 </html>
