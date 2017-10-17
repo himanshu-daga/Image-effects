@@ -17,3 +17,7 @@ canvas {
 input {
   font-size: 14pt;
 }
+
+a {
+  text-decoration: none;
+}
