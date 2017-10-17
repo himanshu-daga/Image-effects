@@ -8,6 +8,7 @@
 canvas {
   border: 2px solid #c3c3c3;
   height: 200px;
+  margin: 10px;
 }
 
 input {
@@ -33,10 +34,6 @@ footer {
 	font-style: italic;
 }
 
-.right {
-	text-align: right;
-}
-
 .list {
 	
 	text-align: center;
@@ -52,13 +49,24 @@ input {
 	background-image: url(img/1.jpg);
 	color: #f0f0f0;
 	padding: 6px;
-	width: 1000px;
 	border-radius: 100px;
 	border-width: 2px;
 	font-size: 14pt;
-
+	width: 55%;
 }
 
 p{
 	color: #4d7284;
+}
+
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
 }
