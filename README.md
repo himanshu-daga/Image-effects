@@ -2,7 +2,7 @@
 
 Web appication allowing to upload an image and add effects to it.
 
-Currently it has 2 effects:
+Currently it has 3 effects:
 1. Filters: Greyscale
 2. Green screen composite
   -to compose a green screen composite, both images used should be of same dimensions. If not then first change them to same         dimensions or else it won't work.
