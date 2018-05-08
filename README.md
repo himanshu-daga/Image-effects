@@ -1,6 +1,6 @@
 # Image-effects
 
-Web appication allowing to upload an image and add effects to it.
+Web appication allowing to upload an image and add effects to it or to perform stegnography using 2 images.
 
 Currently it has 3 effects:
 1. Filters: Greyscale
