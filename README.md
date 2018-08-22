@@ -1,4 +1,4 @@
-# Image-effects
+# Picticia
 
 Web appication allowing to upload an image and add effects to it or to perform stegnography using 2 images.
 
