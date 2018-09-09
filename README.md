@@ -10,7 +10,7 @@ Currently it has 3 effects:
   -hide one image into another image and extract it back whenever required. 
 
 Upcoming features:
-1. Select any color of your choice to apply it's filter
+1. Select any color of your choice to apply it's filter (and not just Greyscale).
 2. Green screen composite handles images of different sizes also
 
 
